@@ -1,0 +1,339 @@
+<p><!DOCTYPE html><html lang=&quot;en&quot;><head><meta charset=&quot;UTF-8&quot;></p>
+
+<p><meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;></p>
+
+<p><title>Be My Valentine &#10084;&#65039;</title></p>
+
+<p><style></p>
+
+<p> /* Body &amp; Background */</p>
+
+<p> body {</p>
+
+<p> background: linear-gradient(to bottom, #ffccd5, #ffc8dd);</p>
+
+<p> text-align: center;</p>
+
+<p> font-family: Times New Roman;, cursive, sans-serif;</p>
+
+<p> margin: 0;</p>
+
+<p> padding: 0;</p>
+
+<p> overflow: hidden;</p>
+
+<p> }</p>
+
+<p> /* Floating Hearts */</p>
+
+<p> @keyframes float {</p>
+
+<p> 0% { transform: translateY(100vh); opacity: 1; }</p>
+
+<p> 100% { transform: translateY(-10vh); opacity: 0; }</p>
+
+<p> }</p>
+
+<p> .heart {</p>
+
+<p> position: absolute;</p>
+
+<p> color: #ff3d71;</p>
+
+<p> font-size: 24px;</p>
+
+<p> animation: float 5s linear infinite;</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> /* Floating Shark Animation */</p>
+
+<p> @keyframes swim {</p>
+
+<p> 0% { left: -100px; }</p>
+
+<p> 50% { top: 60%; }</p>
+
+<p> 100% { left: 110%; }</p>
+
+<p> }</p>
+
+<p> .shark {</p>
+
+<p> position: absolute;</p>
+
+<p> bottom: 20px;</p>
+
+<p> left: -100px;</p>
+
+<p> width: 120px;</p>
+
+<p> animation: swim 8s linear infinite;</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> /* Main Container */</p>
+
+<p> .container {</p>
+
+<p> position: relative;</p>
+
+<p> height: 100vh;</p>
+
+<p> display: flex;</p>
+
+<p> flex-direction: column;</p>
+
+<p> justify-content: center;</p>
+
+<p> align-items: center;</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> h1 {</p>
+
+<p> font-size: 2.5rem;</p>
+
+<p> color: #e60026;</p>
+
+<p> text-shadow: 2px 2px white;</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> /* Spiderman Image */</p>
+
+<p> .spiderman {</p>
+
+<p> width: 100px;</p>
+
+<p> height: auto;</p>
+
+<p> cursor: heart;</p>
+
+<p> transition: transform 0.3s;</p>
+
+<p> }</p>
+
+<p> .spiderman:hover {</p>
+
+<p> transform: scale(1.1);</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> /* Buttons */</p>
+
+<p> .buttons {</p>
+
+<p> margin-top: 20px;</p>
+
+<p> }</p>
+
+<p> button {</p>
+
+<p> background-color: #e60026;</p>
+
+<p> color: white;</p>
+
+<p> border: none;</p>
+
+<p> padding: 15px 30px;</p>
+
+<p> font-size: 1.5rem;</p>
+
+<p> cursor: heart;</p>
+
+<p> margin: 10px;</p>
+
+<p> border-radius: 20px;</p>
+
+<p> box-shadow: 2px 2px 8px rgba(0,0,0,0.3);</p>
+
+<p> transition: 0.3s;</p>
+
+<p> }</p>
+
+<p> button:hover {</p>
+
+<p> background-color: #ff4d4d;</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> /* Moving No Button */</p>
+
+<p> #no-btn {</p>
+
+<p> position: absolute;</p>
+
+<p> transition: 0.3s;</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> /* Hidden Surprise Button */</p>
+
+<p> .hidden-btn {</p>
+
+<p> position: fixed;</p>
+
+<p> bottom: 20px;</p>
+
+<p> right: 20px;</p>
+
+<p> background-color: red;</p>
+
+<p> color: pink ;</p>
+
+<p> font-size: 1rem;</p>
+
+<p> padding: 10px 15px;</p>
+
+<p> border-radius: 10px;</p>
+
+<p> cursor: pointer;</p>
+
+<p> display: none;</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> /* Spotify Embed */</p>
+
+<p> .music {</p>
+
+<p> position: fixed;</p>
+
+<p> bottom: 10px;</p>
+
+<p> left: 10px;</p>
+
+<p> }</p>
+
+<p></style></p>
+
+<p></head><body><!-- Floating Hearts --></p>
+
+<p><script></p>
+
+<p> for (let i = 0; i < 20; i++) {</p>
+
+<p> let heart = document.createElement(&quot;div&quot;);</p>
+
+<p> heart.classList.add(&quot;heart&quot;);</p>
+
+<p> heart.innerHTML = &quot;&#10084;&#65039;&quot;;</p>
+
+<p> document.body.appendChild(heart);</p>
+
+<p> heart.style.left = Math.random() * 100 + &quot;vw&quot;;</p>
+
+<p> heart.style.animationDuration = Math.random() * 3 + 3 + &quot;s&quot;;</p>
+
+<p> }</p>
+
+<p></script></p>
+
+<p></p>
+
+<p><div class=&quot;container&quot;></p>
+
+<p> <img src=&quot;https://i.pinimg.com/736x/cf/73/04/cf730459418f630d5084bd456d6b7da5.jpg&quot; alt=&quot;Cute Spiderman&quot; class=&quot;spiderman&quot; onclick=&quot;spideyClick()&quot;></p>
+
+<p> <h1>WILL YOU BE MY VALENTINE? &#10084;&#65039;</h1></p>
+
+<p></p>
+
+<p> <div class=&quot;buttons&quot;></p>
+
+<p> <button onclick=&quot;sayYes()&quot;>Yes</button></p>
+
+<p> <button id=&quot;no-btn&quot; onmouseover=&quot;moveNo()&quot;>No</button></p>
+
+<p> </div></p>
+
+<p></div></p>
+
+<p></p>
+
+<p><!-- Floating Shark Animation --></p>
+
+<p><img src=&quot;https://static.vecteezy.com/system/resources/previews/028/702/171/original/cute-shark-cartoon-png.png&quot; alt=&quot;Shark&quot; class=&quot;shark&quot;></p>
+
+<p></p>
+
+<p><!-- Hidden Surprise Button --></p>
+
+<p><button class=&quot;hidden-btn&quot; onclick=&quot;surprise()&quot; secret ni&#55357;&#56470;</button></p>
+
+<p></p>
+
+<p><!-- Music Player --></p>
+
+<p><div class=&quot;music&quot;></p>
+
+<p> <iframe style=&quot;border-radius:12px&quot; src=&quot;https://open.spotify.com/embed/track/5kxOQDA9AcuNQXHvg5NpX4?utm_source=generator&quot; width=&quot;250&quot; height=&quot;80&quot; frameBorder=&quot;0&quot; allow=&quot;autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture&quot;></iframe></p>
+
+<p></div></p>
+
+<p></p>
+
+<p><script></p>
+
+<p> function sayYes() {</p>
+
+<p> alert(&quot;yeeeeee kilig podai! &#10084;&#65039;&#55357;&#56695;&#65039;&quot;);</p>
+
+<p> document.querySelector(&quot;.hidden-btn&quot;).style.display = &quot;block&quot;; // Show hidden button</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> function moveNo() {</p>
+
+<p> let noBtn = document.getElementById('no-btn');</p>
+
+<p> let x = Math.random() * (window.innerWidth - 150);</p>
+
+<p> let y = Math.random() * (window.innerHeight - 150);</p>
+
+<p> noBtn.style.left = &#96;${x}px&#96;;</p>
+
+<p> noBtn.style.top = &#96;${y}px&#96;;</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> function spideyClick() {</p>
+
+<p> alert(&quot;Spidey says: 'I webbed my heart to you! &#55357;&#56469;&#55357;&#56696;&#65039;'&quot;);</p>
+
+<p> }</p>
+
+<p></p>
+
+<p> function surprise() {</p>
+
+<p> alert(&quot;happy valentines day sayo&quot;);</p>
+
+<p> }</p>
+
+<p></script></p>
+
+<p></body></p>
+
+<p></html></p>
