@@ -1,0 +1,341 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Be My Valentine ❤️</title>
+
+<style>
+
+    /* Body & Background */
+
+    body {
+
+        background: linear-gradient(to bottom, #ffccd5, #ffc8dd);
+
+        text-align: center;
+
+        font-family: Times New Roman;, cursive, sans-serif;
+
+        margin: 0;
+
+        padding: 0;
+
+        overflow: hidden;
+
+    }
+
+
+
+    /* Floating Hearts */
+
+    @keyframes float {
+
+        0% { transform: translateY(100vh); opacity: 1; }
+
+        100% { transform: translateY(-10vh); opacity: 0; }
+
+    }
+
+    .heart {
+
+        position: absolute;
+
+        color: #ff3d71;
+
+        font-size: 24px;
+
+        animation: float 5s linear infinite;
+
+    }
+
+
+
+    /* Floating Shark Animation */
+
+    @keyframes swim {
+
+        0% { left: -100px; }
+
+        50% { top: 60%; }
+
+        100% { left: 110%; }
+
+    }
+
+    .shark {
+
+        position: absolute;
+
+        bottom: 20px;
+
+        left: -100px;
+
+        width: 120px;
+
+        animation: swim 8s linear infinite;
+
+    }
+
+
+
+    /* Main Container */
+
+    .container {
+
+        position: relative;
+
+        height: 100vh;
+
+        display: flex;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        align-items: center;
+
+    }
+
+
+
+    h1 {
+
+        font-size: 2.5rem;
+
+        color: #e60026;
+
+        text-shadow: 2px 2px white;
+
+    }
+
+
+
+    /* Spiderman Image */
+
+    .spiderman {
+
+        width: 100px;
+
+        height: auto;
+
+        cursor: heart;
+
+        transition: transform 0.3s;
+
+    }
+
+    .spiderman:hover {
+
+        transform: scale(1.1);
+
+    }
+
+
+
+    /* Buttons */
+
+    .buttons {
+
+        margin-top: 20px;
+
+    }
+
+    button {
+
+        background-color: #e60026;
+
+        color: white;
+
+        border: none;
+
+        padding: 15px 30px;
+
+        font-size: 1.5rem;
+
+        cursor: heart;
+
+        margin: 10px;
+
+        border-radius: 20px;
+
+        box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+
+        transition: 0.3s;
+
+    }
+
+    button:hover {
+
+        background-color: #ff4d4d;
+
+    }
+
+
+
+    /* Moving No Button */
+
+    #no-btn {
+
+        position: absolute;
+
+        transition: 0.3s;
+
+    }
+
+
+
+    /* Hidden Surprise Button */
+
+    .hidden-btn {
+
+        position: fixed;
+
+        bottom: 20px;
+
+        right: 20px;
+
+        background-color: red;
+
+        color: pink ;
+
+        font-size: 1rem;
+
+        padding: 10px 15px;
+
+        border-radius: 10px;
+
+        cursor: pointer;
+
+        display: none;
+
+    }
+
+
+
+    /* Spotify Embed */
+
+    .music {
+
+        position: fixed;
+
+        bottom: 10px;
+
+        left: 10px;
+
+    }
+
+</style>
+
+</head><body><!-- Floating Hearts -->
+
+<script>
+
+    for (let i = 0; i < 20; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.classList.add("heart");
+
+        heart.innerHTML = "❤️";
+
+        document.body.appendChild(heart);
+
+        heart.style.left = Math.random() * 100 + "vw";
+
+        heart.style.animationDuration = Math.random() * 3 + 3 + "s";
+
+    }
+
+</script>
+
+
+
+<div class="container">
+
+    <img src="https://i.pinimg.com/736x/cf/73/04/cf730459418f630d5084bd456d6b7da5.jpg" alt="Cute Spiderman" class="spiderman" onclick="spideyClick()">
+
+    <h1>WILL YOU BE MY VALENTINE? ❤️</h1>
+
+    
+
+    <div class="buttons">
+
+        <button onclick="sayYes()">Yes</button>
+
+        <button id="no-btn" onmouseover="moveNo()">No</button>
+
+    </div>
+
+</div>
+
+
+
+<!-- Floating Shark Animation -->
+
+<img src="https://static.vecteezy.com/system/resources/previews/028/702/171/original/cute-shark-cartoon-png.png" alt="Shark" class="shark">
+
+
+
+<!-- Hidden Surprise Button -->
+
+<button class="hidden-btn" onclick="surprise()" secret ni💖</button>
+
+
+
+<!-- Music Player -->
+
+<div class="music">
+
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5kxOQDA9AcuNQXHvg5NpX4?utm_source=generator" width="250" height="80" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+
+</div>
+
+
+
+<script>
+
+    function sayYes() {
+
+        alert("yeeeeee kilig podai! ❤️🕷️");
+
+        document.querySelector(".hidden-btn").style.display = "block"; // Show hidden button
+
+    }
+
+
+
+    function moveNo() {
+
+        let noBtn = document.getElementById('no-btn');
+
+        let x = Math.random() * (window.innerWidth - 150);
+
+        let y = Math.random() * (window.innerHeight - 150);
+
+        noBtn.style.left = `${x}px`;
+
+        noBtn.style.top = `${y}px`;
+
+    }
+
+
+
+    function spideyClick() {
+
+        alert("Spidey says: 'I webbed my heart to you! 💕🕸️'");
+
+    }
+
+
+
+    function surprise() {
+
+        alert("happy valentines day sayo");
+
+    }
+
+</script>
+
+</body>
+
+</html>
